@@ -6,26 +6,26 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 
 import java.util.List;
 
-public class ConverteDados implements IConverteDados {
+public class ConvertsData implements IConvertsData {
     private ObjectMapper mapper = new ObjectMapper();
 
     @Override
-    public <T> T obterDados(String json, Class<T> classe) {
+    public <T> T getJsonData(String json, Class<T> tClass) {
 
         try {
-            return mapper.readValue(json, classe);
+            return mapper.readValue(json, tClass);
         }catch (JsonProcessingException e){
             throw new RuntimeException(e);
         }
     }
 
     @Override
-    public <T> List<T> obterLista(String json, Class<T> classe) {
+    public <T> List<T> getJsonList(String json, Class<T> tClass) {
 
-        CollectionType lista = mapper.getTypeFactory()
-                .constructCollectionType(List.class, classe);
+        CollectionType list = mapper.getTypeFactory()
+                .constructCollectionType(List.class, tClass);
         try {
-            return mapper.readValue(json,lista);
+            return mapper.readValue(json,list);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

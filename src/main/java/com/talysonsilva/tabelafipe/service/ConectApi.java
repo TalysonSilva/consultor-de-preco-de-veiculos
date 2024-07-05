@@ -8,9 +8,9 @@ import java.net.http.HttpResponse;
 
 public class ConectApi {
 
-    public  String obterDados(String endereco){
+    public  String getAddressData(String Address){
     HttpClient client =  HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco))
+    HttpRequest request = HttpRequest.newBuilder().uri(URI.create(Address))
             .build();
         HttpResponse<String > response = null;
         try{

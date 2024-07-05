@@ -1,6 +1,6 @@
 package com.talysonsilva.tabelafipe;
 
-import com.talysonsilva.tabelafipe.view.Tela;
+import com.talysonsilva.tabelafipe.view.Screen;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ public class TabelafipeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Tela tela = new Tela();
-		tela.exibirMenu();
+		Screen screen = new Screen();
+		screen.displayMenu();
 	}
 }
