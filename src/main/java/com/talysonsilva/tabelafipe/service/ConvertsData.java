@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import java.util.List;
 
 public class ConvertsData implements IConvertsData {
+
     private ObjectMapper mapper = new ObjectMapper();
 
     @Override
@@ -17,6 +18,7 @@ public class ConvertsData implements IConvertsData {
         }catch (JsonProcessingException e){
             throw new RuntimeException(e);
         }
+
     }
 
     @Override
@@ -24,10 +26,13 @@ public class ConvertsData implements IConvertsData {
 
         CollectionType list = mapper.getTypeFactory()
                 .constructCollectionType(List.class, tClass);
+
         try {
             return mapper.readValue(json,list);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
+
     }
+
 }
