@@ -28,6 +28,21 @@
 1. Executar o programa `TabelafipeApplication.java`.
 2. Sigar as instrução do menu para realizar consultar dos preços dos veiculos.
 
+## Exemplo de uso
+
+
+<img width="470" src="img/part1.png">
+<br>
+<img width="470" src="img/part2.png">
+<br>
+<img width="470" src="img/part3.png">
+<br>
+<img width="470" src="img/part4.png">
+<br>
+<img width="470" src="img/part5.png">
+<br>
+<img width="470" src="img/part6.png">
+
 ## Autor
 - [Talyson R. Silva Nascimento](https://github.com/TalysonSilva)
 
