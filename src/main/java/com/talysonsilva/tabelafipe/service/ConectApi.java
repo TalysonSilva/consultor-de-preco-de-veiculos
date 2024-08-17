@@ -20,8 +20,7 @@ public class ConectApi {
         }catch (InterruptedException e ){
             throw new RuntimeException(e);
         }
-        String json = response.body();
-        return json;
+        return response.body();
     }
 
 }
